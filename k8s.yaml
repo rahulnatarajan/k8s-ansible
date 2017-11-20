@@ -1,3 +1,4 @@
+---
 - name: Create a kubernetes namespace
   kubernetes:
     api_endpoint: api.allthingsaws.in
