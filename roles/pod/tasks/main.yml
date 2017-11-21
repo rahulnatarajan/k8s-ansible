@@ -6,5 +6,5 @@
     api_endpoint: "{{ api_endpoint }}"
     url_username: "{{ url_username }}"
     url_password: "{{ url_password }}"
-    file_reference: redis.yml
+    file_reference: ../files/redis.yml
     state: present
