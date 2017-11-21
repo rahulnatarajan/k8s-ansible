@@ -1,11 +1,10 @@
 ---
-- name: Pod Creation Role Invoked
-  hosts: localhost
-  tasks:
-    - name: Redis Pod Deployment
-      kubernetes:
-        api_endpoint: "{{ api_endpoint }}"
-        url_username: "{{ url_username }}"
-        url_password: "{{ url_password }}"
-        file_reference: redis.yml
-        state: present
+- name: Redis Pod Deployment
+  tags: 
+     - createpod
+  kubernetes:
+    api_endpoint: "{{ api_endpoint }}"
+    url_username: "{{ url_username }}"
+    url_password: "{{ url_password }}"
+    file_reference: redis.yml
+    state: present
