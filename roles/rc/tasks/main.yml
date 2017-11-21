@@ -6,5 +6,5 @@
     api_endpoint: "{{ api_endpoint }}"
     url_username: "{{ url_username }}"
     url_password: "{{ url_password }}"
-    file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/pod/files/redis.yml
+    file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/pod/files/helloworld-repl-controller.yml
     state: present
