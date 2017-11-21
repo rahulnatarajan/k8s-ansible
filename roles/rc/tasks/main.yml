@@ -1,11 +1,10 @@
 ---
-- name: Replication Controller Deployment Tomcat
+- name: Tomcat Replication Controller Deployment
   tags: 
      - createrc
-  local_action:
-       module: kubernetes
-       api_endpoint: "{{ api_endpoint }}"
-       url_username: "{{ url_username }}"
-       url_password: "{{ url_password }}"
-       file_reference: helloworld-repl-controller.yml
-       state: present
+  kubernetes:
+    api_endpoint: "{{ api_endpoint }}"
+    url_username: "{{ url_username }}"
+    url_password: "{{ url_password }}"
+    file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/pod/files/redis.yml
+    state: present
