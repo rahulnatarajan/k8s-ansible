@@ -16,3 +16,8 @@
 
   roles:
     - rc
+
+- name: Deploy Wordpress
+  hosts: localhost
+  roles:
+    - wordpress
