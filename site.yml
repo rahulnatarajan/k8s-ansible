@@ -19,5 +19,7 @@
 
 - name: Deploy Wordpress
   hosts: localhost
+  tags:
+     - wordpress
   roles:
     - wordpress
