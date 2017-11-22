@@ -6,7 +6,6 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/pv-claim.yml
     state: present
----
 - name: EBS Volume Creation
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
@@ -14,7 +13,6 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/storage.yml
     state: present
----
 - name: Secrets Creation
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
@@ -22,7 +20,6 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/wordpress-secrets.yml
     state: present
----
 - name: Wordpress DB creation
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
@@ -30,7 +27,6 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/wordpress-db.yml
     state: present
----
 - name: DB Service
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
@@ -38,7 +34,6 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/wordpress-db-service.yml
     state: present
----
 - name: Wordpress FE Deployment
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
@@ -46,7 +41,6 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/wordpress-web.yml
     state: present
----
 - name: Wordpress FE Service
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
