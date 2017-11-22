@@ -1,11 +1,4 @@
 ---
-- name: pv claim creation
-  kubernetes:
-    api_endpoint: "{{ api_endpoint }}"
-    url_username: "{{ url_username }}"
-    url_password: "{{ url_password }}"
-    file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/pv-claim.yml
-    state: present
 - name: Secrets Creation
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
