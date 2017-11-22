@@ -1,4 +1,7 @@
 ---
+- name: PV Claim
+  pause: 
+    seconds: 45
 - name: Secrets Creation
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
@@ -20,13 +23,9 @@
     url_password: "{{ url_password }}"
     file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/wordpress-db-service.yml
     state: present
-- name: Wordpress FE Deployment
-  kubernetes:
-    api_endpoint: "{{ api_endpoint }}"
-    url_username: "{{ url_username }}"
-    url_password: "{{ url_password }}"
-    file_reference: /var/lib/awx/projects/_9__k8s_ansible/roles/wordpress/files/wordpress-web.yml
-    state: present
+- name: Deploy WP FE
+  pause: 
+    seconds: 45
 - name: Wordpress FE Service
   kubernetes:
     api_endpoint: "{{ api_endpoint }}"
