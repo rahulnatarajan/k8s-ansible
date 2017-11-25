@@ -71,5 +71,5 @@ spec:
       volumes:
       - name: uploads
         nfs:
-          server: fs-2636146f.efs.us-east-1.amazonaws.com
+          server: fs-dcc1ed95.efs.us-east-1.amazonaws.com
           path: /
